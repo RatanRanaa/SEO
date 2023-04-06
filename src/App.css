@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+.active {
+    font-weight: bold;
+    color: #692aa9;
+  }
+
 @media screen and (max-width: 1000px) {
     #about-img{
         display: none;
