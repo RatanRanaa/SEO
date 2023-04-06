@@ -76,8 +76,8 @@ const Navbar = () => {
                   onClick={() => setIsopenModel(false)}
                 >
                   {' '}
-                  <i class=" px-6 text-4xl fa-brands fa-facebook"></i> Sign up
-                  With Facebook
+                  <i class=" px-6 text-4xl fa-brands fa-google"></i> Sign up
+                  With Google
                 </button>
               </div>
               <div className=" flex items-center justify-center">

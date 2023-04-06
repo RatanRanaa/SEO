@@ -32,9 +32,9 @@ const Home = () => {
 </header>
 
 
-<div className='h-[350px] bg-[#9e3ffd] relative sm:mt-20 md:mt-32 lg:mt-48'>
+<div className='h-[400px] mt-32 bg-[#9e3ffd] relative'>
   <div className='flex flex-col items-center justify-center h-full'>
-    <h1 className='text-3xl text-white mt-8 sm:mt-16 md:mt-20 lg:mt-24'>- Launch Sale -</h1>
+    <h1 className='text-3xl text-white mt-8 sm:mt-16 md:mt-20 lg:mt-2'>- Launch Sale -</h1>
     <h1 className='text-6xl text-white py-6 font-bold sm:text-7xl md:text-8xl'>Get 30% Off</h1>
     <button onClick={() => history("/plans")} className='border px-8 py-2 bg-white text-[#9e3ffd] text-lg sm:text-xl md:text-2xl lg:text-3xl'>Buy Now</button>
   </div>
@@ -76,24 +76,24 @@ const Home = () => {
     </h1>
   </div>
   <div id='industry' className="flex flex-col sm:flex-row items-center justify-between mx-4 sm:mx-24">
-    <div className="flex justify-center flex-col h-[500px] mb-10 sm:mb-0">
+    <div className="flex justify-center flex-col h-[500px] mb-10 sm:mb-0 md:mt-32">
       <img src="./images/dl.webp" alt="logo" className="mx-auto" />
       <h1 className="font-bold text-center mt-5 mb-2">Customer Support 24/7</h1>
-      <p className="w-full px-4 flex items-center text-center">
+      <p className="w-full px-4 flex items-center text-center overflow-hidden">
         SEO Expressed is always available to help and provide expert advice on search engine optimization. With round-the-clock availability, their team of professionals is dedicated to helping businesses maximize their online presence and drive traffic to their websites.
       </p>
     </div>
-    <div className="flex justify-center flex-col h-[500px] mb-10 sm:mb-0">
+    <div className="flex justify-center flex-col h-[500px] mb-10 sm:mb-0 md:mt-32">
       <img src="https://static.wixstatic.com/media/d4d6f6_15b0a68205a543a6a32c8f3607f18e9b~mv2.png/v1/fill/w_215,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/dl_beatsnoop_com-a65qoEnc1h__1_-removebg-preview.png" alt="logo" className="mx-auto" />
       <h1 className="font-bold text-center mt-5 mb-2">Customer Support 24/7</h1>
-      <p className="w-full px-4 flex items-center text-center">
+      <p className="w-full px-4 flex items-center text-center overflow-hidden">
         SEO Expressed is always available to help and provide expert advice on search engine optimization. With round-the-clock availability, their team of professionals is dedicated to helping businesses maximize their online presence and drive traffic to their websites.
       </p>
     </div>
-    <div className="flex items-center justify-center flex-col h-[500px]">
+    <div className="flex items-center justify-center flex-col h-[500px]  mb-10 sm:mb-0 md:mt-32">
       <img src="./images/dl.webp" alt="logo" className="mx-auto" />
       <h1 className="font-bold text-center mt-5 mb-2">Customer Support 24/7</h1>
-      <p className="w-full px-4 flex items-center text-center">
+      <p className="w-full px-4 flex items-center text-center overflow-hidden">
         We are transparent and reliable in providing search engine optimization services and products. With a commitment to 100% trustworthiness, we prioritize customer satisfaction and ensure that all of our clients receive the highest quality of service. Our team of experienced professionals works tirelessly to deliver measurable results, helping businesses achieve their online marketing goals. Customers can trust us that we will receive honest and reliable service every time.
       </p>
     </div>
@@ -147,7 +147,7 @@ const Home = () => {
 
       
       <div>
-  <div className="flex flex-col md:flex-row justify-between h-screen">
+  <div className="flex flex-col md:flex-row justify-between h-full overflow-hidden">
     <div className="w-full md:w-1/2 h-full bg-white px-6 md:px-16 py-8 md:py-20 flex flex-col justify-center">
       <h1 className="text-purple-600 font-bold my-5 tracking-widest text-center md:text-left">
         ABOUT
@@ -194,7 +194,7 @@ const Home = () => {
   </div>
 
   
-  <div className="h-[500px] bg-purple-600 mt-28 flex flex-col justify-center">
+  <div className="h-[500px] bg-purple-600 flex flex-col justify-center">
   <div className="mx-auto max-w-3xl text-center">
     <h1 className="text-white font-bold text-4xl tracking-widest mb-12">
       Customer Reviews
