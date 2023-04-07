@@ -85,7 +85,9 @@ const Plans = () => {
             </h1>
           </div>
           <div class="border mx-auto h-full md:w-80 flex flex-col items-center overflow-hidden mb-4 md:mb-0">
-            <h1 class="my-4 text-2xl font-bold tracking-widest">Gold Plan</h1>
+            <h1 class="my-4 text-2xl font-bold tracking-widest">
+              Platinum Plan
+            </h1>
             <div class="flex items-center">
               <pre class="text-xl">$</pre>
               <h1 class="text-6xl">15</h1>
@@ -97,7 +99,7 @@ const Plans = () => {
             <button class="border px-12 mt-6 mb-5 py-1 bg-[#9e3ffd] text-white tracking-widest">
               Start Free Trial
             </button>
-            <h1 class="border-t-2 px-12 pt-6 font-light flex items-center">
+            <h1 class="border-t-2 px-6 pt-6 font-light flex items-center">
               <i class="text-[#9e3ffd] fas fa-check-circle px-3"></i>
               Everything in Diamond Plan
             </h1>
@@ -129,7 +131,7 @@ const Plans = () => {
             </h1>
             <div className="flex">
               <pre>$</pre>
-              <h1 className="text-6xl">29</h1>
+              <h1 className="text-6xl">10</h1>
             </div>
             <h1 className="pt-2 md:pt-5">Every Month</h1>
             <h1 className="pt-2 md:pt-5 font-light">
@@ -143,39 +145,39 @@ const Plans = () => {
               Everything in Silver plan
             </h1>
             <h1 className="font-light">
-              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check"></i>{' '}
+              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{' '}
               Storyblocks
             </h1>
             <h1 className="font-light">
-              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check"></i>{' '}
+              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{' '}
               Helium 10
             </h1>
             <h1 className="font-light">
-              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check"></i>{' '}
+              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{' '}
               Jungle Scout
             </h1>
             <h1 className="font-light">
-              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check"></i>{' '}
+              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{' '}
               Canva Pro
             </h1>
             <h1 className="font-light">
-              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check"></i>{' '}
+              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{' '}
               Pickmonkey
             </h1>
             <h1 className="font-light">
-              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check"></i>{' '}
+              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{' '}
               Storyblocks
             </h1>
             <h1 className="font-light">
-              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check"></i>{' '}
+              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{' '}
               Helium 10
             </h1>
             <h1 className="font-light">
-              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check"></i>{' '}
+              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{' '}
               Jungle Scout
             </h1>
             <h1 className="font-light">
-              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check"></i>{' '}
+              <i class="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{' '}
               Canva Pro
             </h1>
           </div>
@@ -253,7 +255,7 @@ const Plans = () => {
           </div>
           <div class="border w-80 mx-auto flex items-center flex-col overflow-hidden mt-10 md:mt-0">
             <h1 class="my-4 text-2xl font-bold tracking-widest">
-              Diamond plan
+              Platinum plan
             </h1>
             <div class="flex">
               <pre>$</pre>
@@ -270,12 +272,10 @@ const Plans = () => {
             </h1>
           </div>
           <div class="border w-80 mx-auto flex items-center flex-col overflow-hidden mt-10 md:mt-0">
-            <h1 class="my-4 text-2xl font-bold tracking-widest">
-              Diamond plan
-            </h1>
+            <h1 class="my-4 text-2xl font-bold tracking-widest">Vista plan</h1>
             <div class="flex">
               <pre>$</pre>
-              <h1 class="text-6xl">5</h1>
+              <h1 class="text-6xl">15</h1>
             </div>
             <h1>Every Month</h1>
             <h1 class="font-light pt-24">1 day free trial</h1>
@@ -607,7 +607,7 @@ const Plans = () => {
             </h1>
             <div class="flex">
               <pre>$</pre>
-              <h1 class="text-6xl">0</h1>
+              <h1 class="text-6xl">5</h1>
             </div>
             <h1 class="pt-5">Semrush canva</h1>
             <h1 class="font-light pt-24">Free Plan</h1>

@@ -9,26 +9,34 @@ const Navbar = () => {
     <>
       <nav className=" w-screen bg-white md:block xl:block hidden">
         <div className=" flex items-center justify-between mx-6">
-          <div>
-            <Link to="/"><img src="/images/Screenshot.webp" alt="logo" /></Link>
+          <div className=" flex">
+            <Link className=" flex" to="/">
+              <img src="/images/_Downloader.webp" alt="logo" width={80} />
+              <h1 className=" pt-5 font-bold text-2xl text-gray-400">
+                SEO-EXPRESSED
+              </h1>
+            </Link>
           </div>
           <div>
             <ul className=" flex">
               <NavLink
                 to="/"
-                activeClassName="active"  className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                activeClassName="active"
+                className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
               >
                 Home
               </NavLink>
               <NavLink
                 to="/plans"
-                activeClassName="active" className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                activeClassName="active"
+                className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
               >
                 Plans & Pricing
               </NavLink>
               <NavLink
                 to="/blog"
-                activeClassName="active" className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                activeClassName="active"
+                className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
               >
                 Blog
               </NavLink>
@@ -105,29 +113,68 @@ const Navbar = () => {
                 Close Model
               </button>
             </Model>
-            <button className=" border py-3 px-4 bg-blue-700 text-white font-extralight text-[18px] rounded-3xl">
-              <a href="https://mail.google.com">Contact Now</a>
+            <button className=" border py-3 px-4 bg-[#8d57f7] font-medium text-white text-[18px] rounded-3xl">
+              <a href="https://mail.google.com" target="_main">
+                Contact Now
+              </a>
             </button>
           </div>
         </div>
       </nav>
 
       <nav className="w-screen h-full bg-white sm:block md:hidden lg:hidden xl:hidden">
-        <div className="flex h-full justify-between mx-16">
+        <div className="flex h-full justify-between mx-10">
           <div>
-            <Link to="/"><img onClick={() => setShow(!show)} src="/images/Screenshot.webp" alt="logo" /></Link>
-            <div className={show ? 'hidden' : 'block'}>
+            <Link to="/">
+              <img
+                onClick={() => setShow(!show)}
+                src="/images/_Downloader.webp"
+                width={100}
+                className=" mt-4"
+                alt="logo"
+              />
+            </Link>
+            <div className={show ? 'block' : 'hidden'}>
               <ul className="flex justify-center font-bold flex-col">
-                <Link onClick={() => setShow(!show)} to="/" className=" mt-10 cursor-pointer">Home</Link>
-                <Link onClick={() => setShow(!show)} to="/plans" className=" mt-10 cursor-pointer">Plans & Pricing</Link>
-                <Link onClick={() => setShow(!show)} to="/blog" className=" mt-10 cursor-pointer">Blog</Link>
+                <NavLink
+                  activeClassName="active"
+                  onClick={() => setShow(!show)}
+                  to="/"
+                  className=" mt-10 cursor-pointer"
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  activeClassName="active"
+                  onClick={() => setShow(!show)}
+                  to="/plans"
+                  className=" mt-10 cursor-pointer"
+                >
+                  Plans & Pricing
+                </NavLink>
+                <NavLink
+                  activeClassName="active"
+                  onClick={() => setShow(!show)}
+                  to="/blog"
+                  className=" mt-10 cursor-pointer"
+                >
+                  Blog
+                </NavLink>
+                <NavLink
+                  activeClassName="active"
+                  onClick={() => setShow(!show)}
+                  to="/login"
+                  className=" mt-10 cursor-pointer"
+                >
+                  .
+                </NavLink>
               </ul>
               <div className=" flex items-center justify-between mt-52">
-                <button 
+                <button
                   onClick={() => setIsopenModel(true)}
-                  className=" bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600"
+                  className=" bottom-0 left-0 right-0 p-4 font-bold text-white bg-blue-500 hover:bg-blue-600"
                 >
-                  Log In
+                  LogIn
                 </button>
                 <Model
                   isOpen={isopenModel}
@@ -147,25 +194,34 @@ const Navbar = () => {
                   </h1>
                   <h1 className=" font-bold flex items-center justify-center py-8">
                     Already a member?{' '}
-                    <span className=" text-[18px] text-[#9e3ffd] cursor-pointer">Log In</span>{' '}
+                    <span className=" text-[18px] text-[#9e3ffd] cursor-pointer">
+                      <a href="/login">LogIN</a>
+                    </span>{' '}
                   </h1>
                   <div className=" mx-auto items-center justify-center flex my-6 flex-col ">
                     <img className="" src="" alt="" />
-                    <button
-                      className="  flex items-center justify-center px-10 border my-4 py-2 bg-[#4e69a2]  text-white"
-                      onClick={() => setIsopenModel(false)}
-                    >
+                    <button className=" flex items-center justify-center px-10 border my-4 py-2 bg-[#4e69a2]  text-white">
                       {' '}
-                      <i class=" px-6 text-4xl fa-brands fa-facebook"></i> Sign
-                      up With Facebook
+                      <a
+                        className="flex items-center justify-center"
+                        href="https://www.facebook.com"
+                      >
+                        {' '}
+                        <i class=" px-6 text-4xl fa-brands fa-facebook"></i>{' '}
+                        Sign up with Facebook
+                      </a>
                     </button>
-                    <button
-                      className="  flex items-center justify-center px-10 border my-4 py-2  bg-[#5591f5] text-white "
-                      onClick={() => setIsopenModel(false)}
-                    >
+                    <button className=" flex items-center justify-center px-10 border my-4 py-2  bg-[#5591f5] text-white">
                       {' '}
-                      <i class=" px-6 text-4xl fa-brands fa-google"></i> Sign up
-                      With Google
+                      <a
+                        className="flex items-center justify-center"
+                        target="_main"
+                        href="https://mail.google.com"
+                      >
+                        {' '}
+                        <i class=" px-8 text-4xl fa-brands fa-google"></i> Sign
+                        up with email
+                      </a>
                     </button>
                   </div>
                   <div className=" flex items-center justify-center">
@@ -181,11 +237,14 @@ const Navbar = () => {
                   </div>
                   <button className=" flex items-center justify-center mx-auto mt-7 border px-14 border-black text-2xl py-2">
                     {' '}
-                    Sign up with email
+                    <a href="https://mail.google.com">Sign up with email</a>
                   </button>
                   <p className=" flex items-center justify-center mt-10">
                     Sign up with a public profile.{' '}
-                    <span className=" underline ml-2 cursor-pointer"> Read more </span>
+                    <span className=" underline ml-2 cursor-pointer">
+                      {' '}
+                      <a href="/blog">Read more</a>{' '}
+                    </span>
                   </p>
                   <button
                     className=" mx-auto items-center justify-center flex border px-2 py-2 mt-4 border-black font-medium "
@@ -194,7 +253,11 @@ const Navbar = () => {
                     Close Model
                   </button>
                 </Model>
-                <button onClick={() => setShow(!show)} className=" bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600">
+                <button
+                  onClick={() => setShow(!show)}
+                  target="_main"
+                  className=" bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600 ml-4 font-bold"
+                >
                   Contact Now
                 </button>
               </div>
@@ -205,9 +268,9 @@ const Navbar = () => {
             onClick={() => setShow(!show)}
           >
             {show ? (
-              <i class="fa-solid fa-bars"></i>
-            ) : (
               <i class="fa-solid fa-xmark"></i>
+            ) : (
+              <i class="fa-solid fa-bars"></i>
             )}
           </div>
         </div>
