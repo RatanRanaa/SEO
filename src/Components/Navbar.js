@@ -114,7 +114,8 @@ const Navbar = () => {
               </button>
             </Model>
             <button className=" border py-3 px-4 bg-[#8d57f7] font-medium text-white text-[18px] rounded-3xl">
-              <a href="https://mail.google.com" target="_main">
+              <a href="mailto:your_email_address@gmail.com" target="_main">
+              {/* https://mail.google.com */}
                 Contact Now
               </a>
             </button>
@@ -260,7 +261,7 @@ const Navbar = () => {
                   target="_main"
                   className=" bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600 ml-4 font-bold"
                 >
-                  Contact Now
+                  <a href="mailto:your_email_address@gmail.com">Contact Now</a> 
                 </button>
               </div>
             </div>

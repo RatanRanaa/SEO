@@ -1,7 +1,51 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const items = [
+    {
+      id: 1,
+      quote: "I've used SEO Expressed and I am really satisfied with the products and services they offer. They are the best in the market.",
+      name: 'Ashutosh Saini',
+      location: 'India',
+    },
+    {
+      id: 2,
+      quote: 'SEO Expressed has helped us grow our online presence and reach new customers. Their team is highly skilled and dedicated to delivering results.',
+      name: 'Samantha Johnson',
+      location: 'USA',
+    },
+    {
+      id: 3,
+      quote: 'I highly recommend SEO Expressed to anyone looking to improve their website rankings and increase traffic. They provide top-notch services and support.',
+      name: 'Michael Lee',
+      location: 'Canada',
+    },
+  ];
+
+  const handlePrev = () => {
+    setActiveIndex(activeIndex === 0 ? items.length - 1 : activeIndex - 1);
+  };
+
+  const handleNext = () => {
+    setActiveIndex(activeIndex === items.length - 1 ? 0 : activeIndex + 1);
+  };
+
+  useEffect(() => {
+    // Set up an interval to switch the active index every 5 seconds
+    const interval = setInterval(() => {
+      setActiveIndex((activeIndex) => {
+        return activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+      });
+    }, 5000);
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, [items.length]);
+
+
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
@@ -48,7 +92,7 @@ const Home = () => {
                   SEO EXPRESSED!
                 </h1>
                 <button className="font-medium border mt-5 py-3 md:mb-40 px-6 bg-[#8d57f7] text-white text-lg rounded-3xl">
-                  <a href="https://mail.google.com" target="_main">
+                  <a href="mailto:your_email_address@gmail.com" target="_main">
                     Contact Now
                   </a>
                 </button>
@@ -270,21 +314,42 @@ const Home = () => {
             />
           </div>
         </div>
-
-        <div className="h-[500px] bg-purple-600 flex flex-col justify-center">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-white font-bold text-4xl tracking-widest mb-12">
-              Customer Reviews
-            </h1>
-            <p className="text-white text-2xl mb-4">
-              "I've used SEO Expressed and I am really satisfied with the
-              products and services they offer. They are the best in the
-              market."
-            </p>
-            <h1 className="text-white text-3xl mb-2">Ashutosh Saini</h1>
-            <p className="text-white text-xl mb-4">India</p>
+    <div className="relative h-[500px]">
+      {items.map((item, index) => (
+        <div
+          key={item.id}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+            index === activeIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <div className="h-full bg-purple-600 flex flex-col justify-center px-8 items-center">
+            <p className="text-white text-2xl mb-4 w-full md:w-1/3 mx-auto text-center md:text-center sm:text-left sm:mb-2 md:mb-4">{item.quote}</p>
+            <h1 className="text-white text-3xl mb-2">{item.name}</h1>
+            <p className="text-white text-xl mb-4">{item.location}</p>
           </div>
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25" />
         </div>
+      ))}
+      <button
+        onClick={handlePrev}
+        className="absolute top-1/2 left-0 z-10 p-2 text-white bg-gray-900 rounded-r-lg"
+      >
+        &lt;
+      </button>
+      <button
+        onClick={handleNext}
+        className="absolute top-1/2 right-0 z-10 p-2 text-white bg-gray-900 rounded-l-lg"
+      >
+        &gt;
+      </button>
+    </div>
+
+
+
+
+
+
+
       </div>
 
       <div className="flex items-center justify-center flex-col">
@@ -738,10 +803,10 @@ const Home = () => {
             seoexpressed@gmail.com
           </h1>
           <div className="flex justify-center lg:justify-start">
-            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-instagram"></i>
-            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-linkedin-in"></i>
-            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-facebook-f"></i>
-            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-twitter"></i>
+            <a href="https://www.instagram.com/your_instagram_username/"><i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/your_linkedin_username/"><i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/your_facebook_username/"><i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/your_twitter_username/"><i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-twitter"></i></a>
           </div>
         </div>
         <div id="contact-2" className=" lg:w-1/2 lg:h-auto py-10">
