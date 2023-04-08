@@ -13,7 +13,7 @@ const Navbar = () => {
             <Link className=" flex" to="/">
               <img src="/images/_Downloader.webp" alt="logo" width={80} />
               <h1 className=" pt-5 font-bold text-2xl text-gray-400">
-                SEO-EXPRESSED
+              EXPRESSED
               </h1>
             </Link>
           </div>
@@ -21,22 +21,22 @@ const Navbar = () => {
             <ul className=" flex">
               <NavLink
                 to="/"
-                activeClassName="active"
                 className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                activeclassname="active"
               >
                 Home
               </NavLink>
               <NavLink
                 to="/plans"
-                activeClassName="active"
                 className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                activeclassname="active"
               >
                 Plans & Pricing
               </NavLink>
               <NavLink
                 to="/blog"
-                activeClassName="active"
                 className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                activeclassname="active"
               >
                 Blog
               </NavLink>
@@ -47,7 +47,7 @@ const Navbar = () => {
               onClick={() => setIsopenModel(true)}
               className=" mx-4 py-3 px-4 z-20"
             >
-              <i class="fa-solid fa-user mr- bg-blue-600 text-white rounded-full text-[16px] p-[8px]"></i>{' '}
+              <i className="fa-solid fa-user mr- bg-blue-600 text-white rounded-full text-[16px] p-[8px]"></i>{' '}
               Log IN
             </button>
             <Model
@@ -68,7 +68,7 @@ const Navbar = () => {
               </h1>
               <h1 className=" font-bold flex items-center justify-center py-8">
                 Already a member?{' '}
-                <span className=" text-[18px] text-[#9e3ffd]">Log In</span>{' '}
+                <span className=" text-[18px] text-[#9e3ffd]"> <NavLink to="/login">LogIN</NavLink> </span>{' '}
               </h1>
               <div className=" mx-auto items-center justify-center flex my-6 flex-col ">
                 <img className="" src="" alt="" />
@@ -77,7 +77,7 @@ const Navbar = () => {
                   onClick={() => setIsopenModel(false)}
                 >
                   {' '}
-                  <i class=" px-6 text-4xl fa-brands fa-facebook"></i> Sign up
+                  <i className=" px-6 text-4xl fa-brands fa-facebook"></i> Sign up
                   With Facebook
                 </button>
                 <button
@@ -85,7 +85,7 @@ const Navbar = () => {
                   onClick={() => setIsopenModel(false)}
                 >
                   {' '}
-                  <i class=" px-6 text-4xl fa-brands fa-google"></i> Sign up
+                  <i className=" px-6 text-4xl fa-brands fa-google"></i> Sign up
                   With Google
                 </button>
               </div>
@@ -137,7 +137,7 @@ const Navbar = () => {
             <div className={show ? 'block' : 'hidden'}>
               <ul className="flex justify-center font-bold flex-col">
                 <NavLink
-                  activeClassName="active"
+                  activeclassname="active"
                   onClick={() => setShow(!show)}
                   to="/"
                   className=" mt-10 cursor-pointer"
@@ -145,7 +145,7 @@ const Navbar = () => {
                   Home
                 </NavLink>
                 <NavLink
-                  activeClassName="active"
+                  activeclassname="active"
                   onClick={() => setShow(!show)}
                   to="/plans"
                   className=" mt-10 cursor-pointer"
@@ -153,7 +153,7 @@ const Navbar = () => {
                   Plans & Pricing
                 </NavLink>
                 <NavLink
-                  activeClassName="active"
+                  activeclassname="active"
                   onClick={() => setShow(!show)}
                   to="/blog"
                   className=" mt-10 cursor-pointer"
@@ -161,7 +161,7 @@ const Navbar = () => {
                   Blog
                 </NavLink>
                 <NavLink
-                  activeClassName="active"
+                  activeclassname="active"
                   onClick={() => setShow(!show)}
                   to="/login"
                   className=" mt-10 cursor-pointer"
@@ -170,12 +170,14 @@ const Navbar = () => {
                 </NavLink>
               </ul>
               <div className=" flex items-center justify-between mt-52">
+                <div onClick={() => setShow(!show)}>
                 <button
                   onClick={() => setIsopenModel(true)}
                   className=" bottom-0 left-0 right-0 p-4 font-bold text-white bg-blue-500 hover:bg-blue-600"
                 >
                   LogIn
                 </button>
+                </div>
                 <Model
                   isOpen={isopenModel}
                   onRequestClose={() => setIsopenModel(false)}
@@ -194,8 +196,8 @@ const Navbar = () => {
                   </h1>
                   <h1 className=" font-bold flex items-center justify-center py-8">
                     Already a member?{' '}
-                    <span className=" text-[18px] text-[#9e3ffd] cursor-pointer">
-                      <a href="/login">LogIN</a>
+                    <span onClick={() => setShow(show)} className=" text-[18px] text-[#9e3ffd] cursor-pointer">
+                      <NavLink onClick={() => setIsopenModel(false)} to="/login">LogIn</NavLink>
                     </span>{' '}
                   </h1>
                   <div className=" mx-auto items-center justify-center flex my-6 flex-col ">
@@ -207,7 +209,7 @@ const Navbar = () => {
                         href="https://www.facebook.com"
                       >
                         {' '}
-                        <i class=" px-6 text-4xl fa-brands fa-facebook"></i>{' '}
+                        <i className=" px-2 text-4xl fa-brands fa-facebook"></i>{' '}
                         Sign up with Facebook
                       </a>
                     </button>
@@ -219,7 +221,7 @@ const Navbar = () => {
                         href="https://mail.google.com"
                       >
                         {' '}
-                        <i class=" px-8 text-4xl fa-brands fa-google"></i> Sign
+                        <i className=" px-4 text-4xl fa-brands fa-google"></i> Sign
                         up with email
                       </a>
                     </button>
@@ -235,7 +237,7 @@ const Navbar = () => {
                       <br />
                     </h1>
                   </div>
-                  <button className=" flex items-center justify-center mx-auto mt-7 border px-14 border-black text-2xl py-2">
+                  <button className=" flex items-center justify-center mx-auto mt-7 border px-4 border-black text-2xl py-2">
                     {' '}
                     <a href="https://mail.google.com">Sign up with email</a>
                   </button>
@@ -243,7 +245,7 @@ const Navbar = () => {
                     Sign up with a public profile.{' '}
                     <span className=" underline ml-2 cursor-pointer">
                       {' '}
-                      <a href="/blog">Read more</a>{' '}
+                      <NavLink onClick={() => setIsopenModel(false)} to="/blog"> <a href="/blog">Read More</a></NavLink> {' '}
                     </span>
                   </p>
                   <button
@@ -268,9 +270,9 @@ const Navbar = () => {
             onClick={() => setShow(!show)}
           >
             {show ? (
-              <i class="fa-solid fa-xmark"></i>
+              <i className="fa-solid fa-xmark"></i>
             ) : (
-              <i class="fa-solid fa-bars"></i>
+              <i className="fa-solid fa-bars"></i>
             )}
           </div>
         </div>

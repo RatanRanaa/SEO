@@ -287,39 +287,39 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="flex items-center justify-center flex-col">
-        <h1 class="text-[#9e3ffd] my-6 text-center md:text-left">FAQs</h1>
-        <h1 class="text-4xl text-center md:text-left">
+      <div className="flex items-center justify-center flex-col">
+        <h1 className="text-[#9e3ffd] my-6 text-center md:text-left">FAQs</h1>
+        <h1 className="text-4xl text-center md:text-left">
           Any Questions? We got you
         </h1>
-        <div id="faqs" class="flex flex-col md:flex-row md:h-screen">
-          <div id="faq" class="w-full md:w-1/2">
-            <div class="flex items-center justify-center flex-col">
-              <div class="w-full md:w-3/4">
-                <h1 class="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
+        <div id="faqs" className="flex flex-col md:flex-row md:h-screen">
+          <div id="faq" className="w-full md:w-1/2">
+            <div className="flex items-center justify-center flex-col">
+              <div className="w-full md:w-3/4">
+                <h1 className="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
                   What Would Be The Access Mode?
                 </h1>
-                <p class="w-full flex items-center justify-center mx-auto text-center px-10  mt-4 md:text-left">
+                <p className="w-full flex items-center justify-center mx-auto text-center px-10  mt-4 md:text-left">
                   We are currently offering Access through an extension, you
                   will have to download our extension and install it in chrome.
                   An access guide has been provided in Member Dashboard
                 </p>
               </div>
-              <div class="w-full md:w-3/4">
-                <h1 class="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
+              <div className="w-full md:w-3/4">
+                <h1 className="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
                   Can I Use My Tool On Office As Well?
                 </h1>
-                <p class="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
+                <p className="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
                   We are currently offering Access through an extension, you
                   will have to download our extension and install it in chrome.
                   An access guide has been provided in Member Dashboard
                 </p>
               </div>
-              <div class="w-full md:w-3/4">
-                <h1 class="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
+              <div className="w-full md:w-3/4">
+                <h1 className="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
                   How Would I Get Access?
                 </h1>
-                <p class="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
+                <p className="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
                   We are proud to say that our live chat support replies Quickly
                   & Available the Whole day to assist our Users. We also Offer
                   Anydesk support to Our Users.
@@ -327,34 +327,34 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div id="faq-1" class="w-full md:w-1/2">
-            <div class="flex items-center justify-center flex-col">
-              <div class="w-full md:w-3/4">
-                <h1 class="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
+          <div id="faq-1" className="w-full md:w-1/2">
+            <div className="flex items-center justify-center flex-col">
+              <div className="w-full md:w-3/4">
+                <h1 className="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
                   Do Your Offer Refunds?
                 </h1>
-                <p class="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
+                <p className="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
                   Not at All, We only & Only Refund if our tools don’t work or
                   more than 24 Hours. Make sure to clear anything from the Live
                   Chat Support Before Buying Anything. Read our Refund Policy
                   For More Info.
                 </p>
               </div>
-              <div class="w-full md:w-3/4">
-                <h1 class="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
+              <div className="w-full md:w-3/4">
+                <h1 className="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
                   Can I Share My Account?
                 </h1>
-                <p class="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
+                <p className="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
                   No, We don’t allow account sharing. Single Account for single
                   user. If you shared your account with someone, Our system will
                   autoblock your Account.
                 </p>
               </div>
-              <div class="w-full md:w-3/4">
-                <h1 class="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
+              <div className="w-full md:w-3/4">
+                <h1 className="text-2xl font-normal flex items-center justify-center mt-20 mx-auto text-center md:text-left">
                   Can I Expect A Good Support?
                 </h1>
-                <p class="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
+                <p className="w-full flex items-center justify-center mx-auto text-center px-10 mt-4 md:text-left">
                   No, We don’t allow account sharing. Single Account for single
                   user. If you shared your account with someone, Our system will
                   autoblock your Account.
@@ -365,241 +365,241 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="bg-gray-100 py-10" id="seller">
-        <h1 class="text-4xl font-extrabold text-gray-700 tracking-normal text-center mb-10">
+      <div className="bg-gray-100 py-10" id="seller">
+        <h1 className="text-4xl font-extrabold text-gray-700 tracking-normal text-center mb-10">
           Best Sellers
         </h1>
-        <div class="max-w-7xl mx-auto bg-white px-10 md:mx-50 py-16 flex flex-wrap justify-center">
+        <div className="max-w-7xl mx-auto bg-white px-10 md:mx-50 py-16 flex flex-wrap justify-center">
           <div
             id="sellers-1"
-            class="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
+            className="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
           >
             <img
               src="https://static.wixstatic.com/media/d4d6f6_f43e7757c6184093b309914a58b66270~mv2.png/v1/fill/w_280,h_200,fp_0.23_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/d4d6f6_f43e7757c6184093b309914a58b66270~mv2.png"
               alt="logo"
-              class="w-full h-auto md:h-60 object-contain"
+              className="w-full h-auto md:h-60 object-contain"
             />
-            <h1 class="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl">
+            <h1 className="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl">
               SILVER PLAN
             </h1>
-            <div class="flex justify-center items-center mb-4">
-              <pre class="text-2xl md:text-4xl">$</pre>
-              <h1 class="text-6xl md:text-7xl font-extrabold text-gray-700 md:ml-2">
+            <div className="flex justify-center items-center mb-4">
+              <pre className="text-2xl md:text-4xl">$</pre>
+              <h1 className="text-6xl md:text-7xl font-extrabold text-gray-700 md:ml-2">
                 10
               </h1>
             </div>
-            <h1 class="text-center text-2xl">Every Month</h1>
-            <h1 class="py-5 text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-2xl">Every Month</h1>
+            <h1 className="py-5 text-center text-gray-600 text-sm md:text-base">
               All Basic SEO tools
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               Valid until canceled
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               one day free trial
             </h1>
-            <button class="border-2 border-purple-600 bg-purple-600 text-white tracking-widest mt-6 mb-5 py-1 px-10 md:px-12 block mx-auto">
+            <button className="border-2 border-purple-600 bg-purple-600 text-white tracking-widest mt-6 mb-5 py-1 px-10 md:px-12 block mx-auto">
               Select
             </button>
-            <h1 class="border-t-2 pt-6 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="border-t-2 pt-6 font-light text-center text-gray-600 text-sm md:text-base">
               UberSuggest
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Grammerly
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Sem Rush
             </h1>
           </div>
           <div
             id="sellers-2"
-            class="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
+            className="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
           >
             <img
               src="https://static.wixstatic.com/media/d4d6f6_9ccb4242e5564583b3d04328623d5788~mv2.png/v1/fill/w_296,h_200,fp_0.23_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/d4d6f6_9ccb4242e5564583b3d04328623d5788~mv2.png"
               alt="logo"
-              class="w-full h-auto md:h-60 object-contain"
+              className="w-full h-auto md:h-60 object-contain"
             />
-            <h1 class="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl">
+            <h1 className="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl">
               GOLD PLAN
             </h1>
-            <div class="flex justify-center items-center mb-4">
-              <pre class="text-2xl md:text-4xl">$</pre>
-              <h1 class="text-6xl md:text-7xl font-extrabold text-gray-700 md:ml-2">
+            <div className="flex justify-center items-center mb-4">
+              <pre className="text-2xl md:text-4xl">$</pre>
+              <h1 className="text-6xl md:text-7xl font-extrabold text-gray-700 md:ml-2">
                 15
               </h1>
             </div>
-            <h1 class="text-center text-2xl">Every Month</h1>
-            <h1 class="pt-5 text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-2xl">Every Month</h1>
+            <h1 className="pt-5 text-center text-gray-600 text-sm md:text-base">
               Everything in Silver Plan
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               {' '}
               + More
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               Valid until canceled
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               one day free trail{' '}
             </h1>
-            <button class="border-2 border-purple-600 bg-purple-600 text-white tracking-widest mt-6 mb-5 py-1 px-10 md:px-12 block mx-auto">
+            <button className="border-2 border-purple-600 bg-purple-600 text-white tracking-widest mt-6 mb-5 py-1 px-10 md:px-12 block mx-auto">
               Select
             </button>
-            <h1 class="border-t-2 pt-6 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="border-t-2 pt-6 font-light text-center text-gray-600 text-sm md:text-base">
               Everything in silver plan
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Majestic
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Moz Pro
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Buzzsumo
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Spyfu
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Woorank
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Spamzilla
             </h1>
           </div>
           <div
             id="sellers-2"
-            class="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
+            className="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
           >
             <img
               src="https://static.wixstatic.com/media/d4d6f6_fbdd4ecd85934ac78b377a1177d0dcf5~mv2.png/v1/fill/w_289,h_200,fp_0.23_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/d4d6f6_fbdd4ecd85934ac78b377a1177d0dcf5~mv2.png"
               alt="logo"
-              class="w-full h-auto md:h-60 object-contain"
+              className="w-full h-auto md:h-60 object-contain"
             />
-            <h1 class="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl">
+            <h1 className="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl">
               DIAMOND PLAN
             </h1>
-            <div class="flex justify-center items-center mb-4">
-              <pre class="text-2xl md:text-4xl">$</pre>
-              <h1 class="text-6xl md:text-7xl font-extrabold text-gray-700 md:ml-2">
+            <div className="flex justify-center items-center mb-4">
+              <pre className="text-2xl md:text-4xl">$</pre>
+              <h1 className="text-6xl md:text-7xl font-extrabold text-gray-700 md:ml-2">
                 29
               </h1>
             </div>
-            <h1 class="text-center text-2xl">Every Month</h1>
-            <h1 class="pt-5 text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-2xl">Every Month</h1>
+            <h1 className="pt-5 text-center text-gray-600 text-sm md:text-base">
               Everything in Gold Plan
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               {' '}
               + More
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               Valid until canceled
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               one day free trail{' '}
             </h1>
-            <button class="border-2 border-purple-600 bg-purple-600 text-white tracking-widest mt-6 mb-5 py-1 px-10 md:px-12 block mx-auto">
+            <button className="border-2 border-purple-600 bg-purple-600 text-white tracking-widest mt-6 mb-5 py-1 px-10 md:px-12 block mx-auto">
               Select
             </button>
-            <h1 class="border-t-2 pt-6 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="border-t-2 pt-6 font-light text-center text-gray-600 text-sm md:text-base">
               Everything in silver plan
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Storyblocks
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Helium 10
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Jungle Scout
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Canva Pro
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Pickmonkey
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Crello
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Indexification
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Instatext
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Quilbot
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Envato Elements
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Kwfinder
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Rytr.ai
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Spotify
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Ahref
             </h1>
           </div>
           <div
             id="sellers-2"
-            class="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
+            className="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
           >
             <img
               src="https://static.wixstatic.com/media/d4d6f6_452f48217b5d47209da24d0bda7a6aac~mv2.png/v1/fill/w_280,h_200,fp_0.23_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/d4d6f6_452f48217b5d47209da24d0bda7a6aac~mv2.png"
               alt="logo"
-              class="w-full h-auto md:h-60 object-contain"
+              className="w-full h-auto md:h-60 object-contain"
             />
-            <h1 class="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl">
+            <h1 className="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl">
               PLATINUM PLAN
             </h1>
-            <div class="flex justify-center items-center mb-4">
-              <pre class="text-2xl md:text-4xl">$</pre>
-              <h1 class="text-6xl md:text-7xl font-extrabold text-gray-700 md:ml-2">
+            <div className="flex justify-center items-center mb-4">
+              <pre className="text-2xl md:text-4xl">$</pre>
+              <h1 className="text-6xl md:text-7xl font-extrabold text-gray-700 md:ml-2">
                 49
               </h1>
             </div>
-            <h1 class="text-center text-2xl">Every Month</h1>
-            <h1 class="pt-5 text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-2xl">Every Month</h1>
+            <h1 className="pt-5 text-center text-gray-600 text-sm md:text-base">
               Everything in Gold Plan
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               {' '}
               + More
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               Valid until canceled
             </h1>
-            <h1 class="text-center text-gray-600 text-sm md:text-base">
+            <h1 className="text-center text-gray-600 text-sm md:text-base">
               one day free trail{' '}
             </h1>
-            <button class="border-2 border-purple-600 bg-purple-600 text-white tracking-widest mt-6 mb-5 py-1 px-10 md:px-12 block mx-auto">
+            <button className="border-2 border-purple-600 bg-purple-600 text-white tracking-widest mt-6 mb-5 py-1 px-10 md:px-12 block mx-auto">
               Select
             </button>
-            <h1 class="border-t-2 pt-6 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="border-t-2 pt-6 font-light text-center text-gray-600 text-sm md:text-base">
               Everything in silver plan
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Storyblocks
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Helium 10
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Jungle Scout
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Canva Pro
             </h1>
-            <h1 class="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
+            <h1 className="pt-4 font-light text-center text-gray-600 text-sm md:text-base">
               Pickmonkey
             </h1>
           </div>
@@ -721,30 +721,30 @@ const Home = () => {
 
       <div
         id="contact"
-        class="flex flex-col lg:flex-row items-center justify-between"
+        className="flex flex-col lg:flex-row items-center justify-between"
       >
-        <div id="contact-1" class=" lg:w-1/2 lg:h-auto pb-20 lg:pl-36">
-          <h1 class="text-[#9e3ffd] text-center text-2xl my-20 font-bold underline lg:text-left tracking-widest">
+        <div id="contact-1" className=" lg:w-1/2 lg:h-auto pb-20 lg:pl-36">
+          <h1 className="text-[#9e3ffd] text-center text-2xl my-20 font-bold underline lg:text-left tracking-widest">
             Contact
           </h1>
-          <h1 class="text-3xl py-4 font-bold text-center lg:text-left">
+          <h1 className="text-3xl py-4 font-bold text-center lg:text-left">
             Drop your queries
           </h1>
-          <div class="flex flex-col lg:flex-row py-1 text-center lg:text-left">
-            <h1 class="font-bold">140E Hartsdale Avenue New York </h1>
-            <h1 class="font-bold ml-0 lg:ml-4">United States</h1>
+          <div className="flex flex-col lg:flex-row py-1 text-center lg:text-left">
+            <h1 className="font-bold">140E Hartsdale Avenue New York </h1>
+            <h1 className="font-bold ml-0 lg:ml-4">United States</h1>
           </div>
-          <h1 class="font-bold py-1 text-center lg:text-left">
+          <h1 className="font-bold py-1 text-center lg:text-left">
             seoexpressed@gmail.com
           </h1>
-          <div class="flex justify-center lg:justify-start">
-            <i class="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-instagram"></i>
-            <i class="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-linkedin-in"></i>
-            <i class="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-facebook-f"></i>
-            <i class="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-twitter"></i>
+          <div className="flex justify-center lg:justify-start">
+            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-instagram"></i>
+            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-linkedin-in"></i>
+            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-facebook-f"></i>
+            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-twitter"></i>
           </div>
         </div>
-        <div id="contact-2" class=" lg:w-1/2 lg:h-auto py-10">
+        <div id="contact-2" className=" lg:w-1/2 lg:h-auto py-10">
           <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
             <div className="mb-4">
               <label
