@@ -1,7 +1,49 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const items = [
+    {
+      id: 1,
+      quote: "I've used SEO Expressed and I am really satisfied with the products and services they offer. They are the best in the market.",
+      name: 'Ashutosh Saini',
+      location: 'India',
+    },
+    {
+      id: 2,
+      quote: 'SEO Expressed has helped us grow our online presence and reach new customers. Their team is highly skilled and dedicated to delivering results.',
+      name: 'Samantha Johnson',
+      location: 'USA',
+    },
+    {
+      id: 3,
+      quote: 'I highly recommend SEO Expressed to anyone looking to improve their website rankings and increase traffic. They provide top-notch services and support.',
+      name: 'Michael Lee',
+      location: 'Canada',
+    },
+  ];
+
+  const handlePrev = () => {
+    setActiveIndex(activeIndex === 0 ? items.length - 1 : activeIndex - 1);
+  };
+
+  const handleNext = () => {
+    setActiveIndex(activeIndex === items.length - 1 ? 0 : activeIndex + 1);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((activeIndex) => {
+        return activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [items.length]);
+
+
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
@@ -16,13 +58,6 @@ const Home = () => {
     <>
       <header id="header" className="relative">
         <div className="">
-          <div className="">
-            <img
-              className=" w-full h-screen absolute inset-0"
-              src="./images/WhatsApp.jpeg"
-              alt="logo"
-            />
-          </div>
           <div className="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
             <div className="md:flex md:items-center md:justify-between">
               <div className="">
@@ -48,18 +83,25 @@ const Home = () => {
                   SEO EXPRESSED!
                 </h1>
                 <button className="font-medium border mt-5 py-3 md:mb-40 px-6 bg-[#8d57f7] text-white text-lg rounded-3xl">
-                  <a href="https://mail.google.com" target="_main">
+                  <a href="mailto:your_email_address@gmail.com" target="_main">
                     Contact Now
                   </a>
                 </button>
               </div>
-              <div className=" md:block md:ml-10 md:w-1/3 ">
+              <div className=" md:w-1/3 ">
                 <img className="" src="./images/_Downloader.webp" alt="logo" />
               </div>
             </div>
           </div>
         </div>
       </header>
+          <div className=" ">
+            <img id='header-img'
+              className=" mt-[100px] md:mt-[440px] w-full h-screen absolute inset-0"
+              src="./images/WhatsApp.jpeg"
+              alt="logo"
+            />
+          </div>
 
       <div className="h-[400px] bg-[#9e3ffd] relative">
         <div className="flex flex-col items-center justify-center h-full">
@@ -117,67 +159,65 @@ const Home = () => {
         </ul>
       </div>
 
-      <div>
-        <div>
-          <h1 className="mx-auto flex items-center justify-center mt-10 mb-5 text-[#9e3ffd] font-bold text-center sm:text-left">
-            We Build Trust
-          </h1>
-          <h1 className="text-4xl flex items-center justify-center font-bold text-center sm:text-left">
-            Industry Experts
-          </h1>
-        </div>
-        <div
-          id="industry"
-          className="flex flex-col sm:flex-row items-center justify-between mx-4 sm:mx-24"
-        >
-          <div className="flex justify-center flex-col h-[500px] mb-10 sm:h-full md:mt-32">
-            <img src="./images/dl.webp" alt="logo" className="mx-auto" />
-            <h1 className="font-bold text-center mt-5 mb-2">
-              Customer Support 24/7
-            </h1>
-            <p className="w-full px-4 flex items-center text-center overflow-hidden sm:h-full md:px-16">
-              SEO Expressed is always available to help and provide expert
-              advice on search engine optimization. With round-the-clock
-              availability, their team of professionals is dedicated to helping
-              businesses maximize their online presence and drive traffic to
-              their websites.
-            </p>
-          </div>
-          <div className="flex justify-center flex-col h-[500px] mb-10 sm:h-full md:mt-32">
-            <img
-              src="https://static.wixstatic.com/media/d4d6f6_15b0a68205a543a6a32c8f3607f18e9b~mv2.png/v1/fill/w_215,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/dl_beatsnoop_com-a65qoEnc1h__1_-removebg-preview.png"
-              alt="logo"
-              className="mx-auto"
-            />
-            <h1 className="font-bold text-center mt-5 mb-2">
-              Customer Support 24/7
-            </h1>
-            <p className="w-full px-4 flex items-center text-center overflow-hidden sm:h-full md:px-16">
-              SEO Expressed is always available to help and provide expert
-              advice on search engine optimization. With round-the-clock
-              availability, their team of professionals is dedicated to helping
-              businesses maximize their online presence and drive traffic to
-              their websites.
-            </p>
-          </div>
-          <div className="flex items-center justify-center flex-col h-[600px]  mb-10 sm:h-full md:mt-32">
-            <img src="./images/dl.webp" alt="logo" className="mx-auto" />
-            <h1 className="font-bold text-center mt-5 mb-2">
-              Customer Support 24/7
-            </h1>
-            <p className="w-full px-4 flex items-center text-center overflow-hidden sm:h-full md:px-16">
-              We are transparent and reliable in providing search engine
-              optimization services and products. With a commitment to 100%
-              trustworthiness, we prioritize customer satisfaction and ensure
-              that all of our clients receive the highest quality of service.
-              Our team of experienced professionals works tirelessly to deliver
-              measurable results, helping businesses achieve their online
-              marketing goals. Customers can trust us that we will receive
-              honest and reliable service every time.
-            </p>
-          </div>
-        </div>
-      </div>
+<div className=''>
+  <div className=" flex items-center justify-center flex-col text-center sm:text-left">
+    <h1 className="mt-10 mb-5 text-[#9e3ffd] font-bold">
+      We Build Trust
+    </h1>
+    <h1 className="text-4xl font-bold">
+      Industry Experts
+    </h1>
+  </div>
+  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 text-center mb-10">
+    <div>
+      <img src="./images/dl.webp" alt="logo" className="mx-auto" />
+      <h1 className="font-bold mt-5 mb-2">
+        Customer Support 24/7
+      </h1>
+      <p>
+        SEO Expressed is always available to help and provide expert
+        advice on search engine optimization. With round-the-clock
+        availability, their team of professionals is dedicated to helping
+        businesses maximize their online presence and drive traffic to
+        their websites.
+      </p>
+    </div>
+    <div>
+      <img
+        src="https://static.wixstatic.com/media/d4d6f6_15b0a68205a543a6a32c8f3607f18e9b~mv2.png/v1/fill/w_215,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/dl_beatsnoop_com-a65qoEnc1h__1_-removebg-preview.png"
+        alt="logo"
+        className="mx-auto"
+      />
+      <h1 className="font-bold mt-5 mb-2">
+        Customer Support 24/7
+      </h1>
+      <p>
+        SEO Expressed is always available to help and provide expert
+        advice on search engine optimization. With round-the-clock
+        availability, their team of professionals is dedicated to helping
+        businesses maximize their online presence and drive traffic to
+        their websites.
+      </p>
+    </div>
+    <div>
+      <img src="./images/dl.webp" alt="logo" className="mx-auto" />
+      <h1 className="font-bold mt-5 mb-2">
+        Customer Support 24/7
+      </h1>
+      <p>
+        We are transparent and reliable in providing search engine
+        optimization services and products. With a commitment to 100%
+        trustworthiness, we prioritize customer satisfaction and ensure
+        that all of our clients receive the highest quality of service.
+        Our team of experienced professionals works tirelessly to deliver
+        measurable results, helping businesses achieve their online
+        marketing goals. Customers can trust us that we will receive
+        honest and reliable service every time.
+      </p>
+    </div>
+  </div>
+</div>
+
 
       <div className=" bg-[#16163f]">
         <div className="mx-auto px-6 py-12 max-w-7xl">
@@ -187,7 +227,7 @@ const Home = () => {
             </h1>
             <ul className="flex flex-wrap justify-center -mx-4">
               <li className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
-                <h1 className="text-5xl py-4 font-bold text-white ml-8 mb-2 sm:text-5xl md:text-7xl md:mx-28">
+                <h1 className="text-5xl py-4 font-bold text-white ml-8 mb-2 sm:text-5xl md:text-4xl flex items-center justify-center text-center">
                   2
                 </h1>
                 <h1 className="text-2xl font-light text-white flex items-center justify-center">
@@ -195,7 +235,7 @@ const Home = () => {
                 </h1>
               </li>
               <li className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
-                <h1 className="text-5xl py-4 font-bold text-white ml-4 mb-2 sm:text-5xl md:text-7xl md:mx-28">
+                <h1 className="text-5xl py-4 font-bold text-white ml-4 mb-2 sm:text-5xl md:text-4xl flex items-center justify-center text-center">
                   679
                 </h1>
                 <h1 className="text-2xl font-light text-white flex items-center justify-center">
@@ -203,7 +243,7 @@ const Home = () => {
                 </h1>
               </li>
               <li className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
-                <h1 className="text-5xl py-4 font-bold text-white ml-1 mb-2 sm:text-5xl md:text-7xl md:mx-28">
+                <h1 className="text-5xl py-4 font-bold text-white ml-1 mb-2 sm:text-5xl md:text-4xl flex items-center justify-center text-center">
                   13
                 </h1>
                 <h1 className="text-2xl font-light text-white flex items-center justify-center">
@@ -211,7 +251,7 @@ const Home = () => {
                 </h1>
               </li>
               <li className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
-                <h1 className="text-5xl py-4 font-bold text-white ml-1 mb-2 sm:text-5xl md:text-7xl md:mx-28">
+                <h1 className="text-5xl py-4 font-bold text-white ml-1 mb-2 sm:text-5xl md:text-4xl flex items-center justify-center text-center">
                   34
                 </h1>
                 <h1 className="text-2xl font-light text-white flex items-center justify-center">
@@ -225,7 +265,7 @@ const Home = () => {
 
       <div>
         <div className="flex flex-col md:flex-row justify-between h-full overflow-hidden">
-          <div className="w-full md:w-1/2 h-full bg-white px-6 md:px-16 py-8 md:py-20 flex flex-col justify-center">
+          <div className="w-full md:w-full h-full bg-white px-6 md:px-16 py-8 md:py-20 flex flex-col justify-center">
             <h1 className="text-purple-600 font-bold my-5 tracking-widest text-center md:text-left">
               ABOUT
             </h1>
@@ -264,35 +304,52 @@ const Home = () => {
           <div className="w-full md:w-1/2 h-full flex items-center justify-center">
             <img
               id="about-img"
-              className="h-full w-full object-cover"
+              className=" h-screen object-cover"
               src="./images/About.jpeg"
               alt="about-img"
             />
           </div>
         </div>
-
-        <div className="h-[500px] bg-purple-600 flex flex-col justify-center">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-white font-bold text-4xl tracking-widest mb-12">
-              Customer Reviews
-            </h1>
-            <p className="text-white text-2xl mb-4">
-              "I've used SEO Expressed and I am really satisfied with the
-              products and services they offer. They are the best in the
-              market."
-            </p>
-            <h1 className="text-white text-3xl mb-2">Ashutosh Saini</h1>
-            <p className="text-white text-xl mb-4">India</p>
+    <div className="relative h-[500px]">
+      {items.map((item, index) => (
+        <div
+          key={item.id}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+            index === activeIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <div className="h-full bg-purple-600 flex flex-col justify-center px-8 items-center">
+            <p className="text-white text-2xl mb-4 w-full md:w-1/2 mx-auto text-center md:text-center sm:text-left sm:mb-2 md:mb-4">{item.quote}</p>
+            <h1 className="text-white text-3xl mb-2">{item.name}</h1>
+            <p className="text-white text-xl mb-4">{item.location}</p>
           </div>
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25" />
         </div>
+      ))}
+      <button
+        onClick={handlePrev}
+        className="absolute top-1/2 left-0 z-10 p-2 text-white bg-gray-900 rounded-r-lg"
+      >
+        &lt;
+      </button>
+      <button
+        onClick={handleNext}
+        className="absolute top-1/2 right-0 z-10 p-2 text-white bg-gray-900 rounded-l-lg"
+      >
+        &gt;
+      </button>
+    </div>
       </div>
 
-      <div className="flex items-center justify-center flex-col">
+
+      
+
+      <div className="flex items-center justify-center flex-col mb-10">
         <h1 className="text-[#9e3ffd] my-6 text-center md:text-left">FAQs</h1>
         <h1 className="text-4xl text-center md:text-left">
           Any Questions? We got you
         </h1>
-        <div id="faqs" className="flex flex-col md:flex-row md:h-screen">
+        <div id="faqs" className="flex flex-col md:flex-row md:h-full">
           <div id="faq" className="w-full md:w-1/2">
             <div className="flex items-center justify-center flex-col">
               <div className="w-full md:w-3/4">
@@ -606,16 +663,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="individual" className="bg-[#f9f3ff]">
+      <div id="individual" className="bg-[#f9f3ff] container" >
         <h1 className="flex items-center justify-center py-20 text-4xl font-bold">
           Individual Plan
         </h1>
-        <div className="bg-white px-4 py-20 md:p-20 max-w-7xl mx-auto  flex flex-wrap justify-center">
-          <div
-            id="individual-1"
-            className="flex items-center justify-center mb-8 md:mb-0 md:w-1/4"
-          >
-            <div className="border h-[640px] w-60 flex flex-col items-center overflow-hidden">
+        <div className="bg-white py-20 md:p-20 max-w-7xl flex justify-center flex-wrap m-auto">
+        
+            <div className="border h-[640px] w-60 flex flex-col items-center overflow-hidden px-5 mx-5">
               <img
                 src="https://static.wixstatic.com/media/d4d6f6_9ab7c271931f470794f99d26e00d5d84~mv2.webp"
                 alt="logo"
@@ -635,12 +689,8 @@ const Home = () => {
               </button>
               <h1 className="border-t-2 px-12 py-6 font-light">Veed.io</h1>
             </div>
-          </div>
-          <div
-            id="individual-2"
-            className="flex items-center justify-center mb-8 md:mb-0 md:w-1/4"
-          >
-            <div className="border h-[600px] w-60 flex flex-col items-center overflow-hidden">
+        
+            <div className="border h-[600px] w-60 flex flex-col items-center overflow-hidden px-5 mx-5">
               <img
                 className=" mt-1"
                 src="https://static.wixstatic.com/media/d4d6f6_418267f6aa9c499192ab25919d3af73c~mv2.jpeg/v1/fill/w_296,h_200,fp_0.23_0.50,lg_1,q_80,enc_auto/d4d6f6_418267f6aa9c499192ab25919d3af73c~mv2.jpeg"
@@ -663,12 +713,8 @@ const Home = () => {
                 Semrush Trend
               </h1>
             </div>
-          </div>
-          <div
-            id="individual-2"
-            className="flex items-center justify-center mb-8 md:mb-0 md:w-1/4"
-          >
-            <div className="border h-[600px] w-60 flex flex-col items-center overflow-hidden">
+        
+            <div className="border h-[600px] w-60 flex flex-col items-center overflow-hidden px-5 mx-5">
               <img
                 className=" mt-1"
                 src="https://static.wixstatic.com/media/d4d6f6_29e3cde9d89548ef82e09ec40219579b~mv2.png/v1/fill/w_289,h_200,fp_0.23_0.50,lg_1,q_85,enc_auto/d4d6f6_29e3cde9d89548ef82e09ec40219579b~mv2.png"
@@ -689,12 +735,8 @@ const Home = () => {
               </button>
               <h1 className="border-t-2 px-12 py-6 font-light">Vistacreate</h1>
             </div>
-          </div>
-          <div
-            id="individual-3"
-            className="flex items-center justify-center mb-8 md:mb-0 md:w-1/4"
-          >
-            <div className="border h-[600px] w-60 flex flex-col items-center overflow-hidden">
+        
+            <div className="border h-[600px] w-60 flex flex-col items-center overflow-hidden px-5 mx-5">
               <img
                 className=" mt-1"
                 src="https://static.wixstatic.com/media/d4d6f6_a0591139935f48458ae13333baf6a399~mv2.jpg/v1/fill/w_280,h_200,fp_0.23_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/d4d6f6_a0591139935f48458ae13333baf6a399~mv2.jpg"
@@ -715,9 +757,9 @@ const Home = () => {
               </button>
               <h1 className="border-t-2 px-12 py-6 font-light">SpyFu</h1>
             </div>
-          </div>
         </div>
       </div>
+      
 
       <div
         id="contact"
@@ -738,10 +780,10 @@ const Home = () => {
             seoexpressed@gmail.com
           </h1>
           <div className="flex justify-center lg:justify-start">
-            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-instagram"></i>
-            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-linkedin-in"></i>
-            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-facebook-f"></i>
-            <i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-twitter"></i>
+            <a href="https://www.instagram.com/your_instagram_username/"><i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/your_linkedin_username/"><i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/your_facebook_username/"><i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/your_twitter_username/"><i className="mx-4 cursor-pointer font-medium py-4 lg:py-12 text-2xl fa-brands fa-twitter"></i></a>
           </div>
         </div>
         <div id="contact-2" className=" lg:w-1/2 lg:h-auto py-10">

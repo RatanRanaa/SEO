@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       <nav className=" w-screen bg-white md:block xl:block hidden">
-        <div className=" flex items-center justify-between mx-6">
+        <div className=" flex items-center justify-between">
           <div className=" flex">
             <Link className=" flex" to="/">
               <img src="/images/_Downloader.webp" alt="logo" width={80} />
@@ -113,8 +113,11 @@ const Navbar = () => {
                 Close Model
               </button>
             </Model>
-            <button className=" border py-3 px-4 bg-[#8d57f7] font-medium text-white text-[18px] rounded-3xl">
-              <a href="https://mail.google.com" target="_main">
+            <button className=" border py-3 px-4 mr-5 bg-[#8d57f7] font-medium text-white text-[18px] rounded-3xl">
+              
+              <a href="https://accounts.google.com/" target="_main">
+              {/* https://mail.google.com */}
+              {/* mailto:your_email_address@gmail.com */}
                 Contact Now
               </a>
             </button>
@@ -122,7 +125,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <nav className="w-screen h-full bg-white sm:block md:hidden lg:hidden xl:hidden">
+      <nav className="w-screen  bg-white sm:block md:hidden lg:hidden xl:hidden relative z-20">
         <div className="flex h-full justify-between mx-10">
           <div>
             <Link to="/">
@@ -173,7 +176,7 @@ const Navbar = () => {
                 <div onClick={() => setShow(!show)}>
                 <button
                   onClick={() => setIsopenModel(true)}
-                  className=" bottom-0 left-0 right-0 p-4 font-bold text-white bg-blue-500 hover:bg-blue-600"
+                  className=" bottom-0 mb-10 left-0 right-0 p-4 font-bold text-white bg-blue-500 hover:bg-blue-600"
                 >
                   LogIn
                 </button>
@@ -249,7 +252,7 @@ const Navbar = () => {
                     </span>
                   </p>
                   <button
-                    className=" mx-auto items-center justify-center flex border px-2 py-2 mt-4 border-black font-medium "
+                    className=" mx-auto items-center justify-center flex border px-2 py-2 mt-4  border-black font-medium "
                     onClick={() => setIsopenModel(false)}
                   >
                     Close Model
@@ -258,9 +261,9 @@ const Navbar = () => {
                 <button
                   onClick={() => setShow(!show)}
                   target="_main"
-                  className=" bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600 ml-4 font-bold"
+                  className=" mb-10 bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600 ml-4 font-bold"
                 >
-                  Contact Now
+                  <a href="mailto:your_email_address@gmail.com">Contact Now</a> 
                 </button>
               </div>
             </div>
