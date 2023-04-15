@@ -41,7 +41,7 @@ const Blog = () => {
               </h1>
               <div class="mt-2 sm:mt-4">
                 <h1 class="font-light">
-                  3 Views <span class="ml-4 sm:ml-6">0 comments</span>
+                  7 Views <span class="ml-4 sm:ml-6">0 comments</span>
                 </h1>
               </div>
             </div>
