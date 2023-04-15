@@ -10,29 +10,29 @@ const Blog = () => {
       </div>
 
       <div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="border">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="border">
               <img
-                class="h-full w-full object-cover"
+                className="h-full w-full object-cover"
                 src="https://static.wixstatic.com/media/nsplsh_197bdb827dd74f9585db55f630f4925d~mv2.jpg/v1/fill/w_568,h_426,fp_0.50_0.50,q_90,enc_auto/nsplsh_197bdb827dd74f9585db55f630f4925d~mv2.jpg"
                 alt="logo"
               />
             </div>
-            <div class="border pl-4 sm:pl-6">
-              <h1 class="font-light">
+            <div className="border pl-4 sm:pl-6">
+              <h1 className="font-light">
                 {' '}
-                Prabhanjay Tiwari <i class="fa-solid fa-graduation-cap"></i>
+                Prabhanjay Tiwari <i className="fa-solid fa-graduation-cap"></i>
               </h1>
-              <h1 class="font-light mt-1">Mar 25 . 3Min</h1>
-              <h1 class="font-bold text-2xl sm:text-3xl leading-relaxed mt-2">
+              <h1 className="font-light mt-1">Mar 25 . 3Min</h1>
+              <h1 className="font-bold text-2xl sm:text-3xl leading-relaxed mt-2">
                 <a href="a">
                   How SEO Expressed will help you to be more creative in your
                   online journey ?
                 </a>
                 <br />
               </h1>
-              <h1 class="pt-2 sm:pt-5 font-normal leading-relaxed border-b-2 pb-2 sm:pb-5 tracking-tight">
+              <h1 className="pt-2 sm:pt-5 font-normal leading-relaxed border-b-2 pb-2 sm:pb-5 tracking-tight">
                 <a href="a">
                   SEO Expressed is a group buy website that provides access to a
                   wide range of SEO tools and other creative software ata an
@@ -41,7 +41,7 @@ const Blog = () => {
               </h1>
               <div class="mt-2 sm:mt-4">
                 <h1 class="font-light">
-                  7 Views <span class="ml-4 sm:ml-6">0 comments</span>
+                  3 Views <span class="ml-4 sm:ml-6">0 comments</span>
                 </h1>
               </div>
             </div>
@@ -59,7 +59,7 @@ const Blog = () => {
             </div>
             <div className="border pl-4 md:pl-14">
               <h1 className="font-light">
-                Prabhanjay Tiwari <i class="fa-solid fa-graduation-cap"></i>
+                Prabhanjay Tiwari <i className="fa-solid fa-graduation-cap"></i>
               </h1>
               <h1 className="font-light">Mar 25 . 3Min</h1>
               <h1 className="font-bold text-3xl leading-relaxed">

@@ -8,27 +8,35 @@ const Navbar = () => {
   return (
     <>
       <nav className=" w-screen bg-white md:block xl:block hidden">
-        <div className=" flex items-center justify-between mx-6">
-          <div>
-            <Link to="/"><img src="/images/Screenshot.webp" alt="logo" /></Link>
+        <div className=" flex items-center justify-between">
+          <div className=" flex">
+            <Link className=" flex" to="/">
+              <img src="/images/_Downloader.webp" alt="logo" width={80} />
+              <h1 className=" pt-5 font-bold text-2xl text-gray-400">
+              EXPRESSED
+              </h1>
+            </Link>
           </div>
           <div>
             <ul className=" flex">
               <NavLink
                 to="/"
-                activeClassName="active"  className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                activeclassname="active"
               >
                 Home
               </NavLink>
               <NavLink
                 to="/plans"
-                activeClassName="active" className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                activeclassname="active"
               >
                 Plans & Pricing
               </NavLink>
               <NavLink
                 to="/blog"
-                activeClassName="active" className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
+                activeclassname="active"
               >
                 Blog
               </NavLink>
@@ -39,7 +47,7 @@ const Navbar = () => {
               onClick={() => setIsopenModel(true)}
               className=" mx-4 py-3 px-4 z-20"
             >
-              <i class="fa-solid fa-user mr- bg-blue-600 text-white rounded-full text-[16px] p-[8px]"></i>{' '}
+              <i className="fa-solid fa-user mr- bg-blue-600 text-white rounded-full text-[16px] p-[8px]"></i>{' '}
               Log IN
             </button>
             <Model
@@ -60,7 +68,7 @@ const Navbar = () => {
               </h1>
               <h1 className=" font-bold flex items-center justify-center py-8">
                 Already a member?{' '}
-                <span className=" text-[18px] text-[#9e3ffd]">Log In</span>{' '}
+                <span className=" text-[18px] text-[#9e3ffd]"> <NavLink to="/login">LogIN</NavLink> </span>{' '}
               </h1>
               <div className=" mx-auto items-center justify-center flex my-6 flex-col ">
                 <img className="" src="" alt="" />
@@ -69,7 +77,7 @@ const Navbar = () => {
                   onClick={() => setIsopenModel(false)}
                 >
                   {' '}
-                  <i class=" px-6 text-4xl fa-brands fa-facebook"></i> Sign up
+                  <i className=" px-6 text-4xl fa-brands fa-facebook"></i> Sign up
                   With Facebook
                 </button>
                 <button
@@ -77,7 +85,7 @@ const Navbar = () => {
                   onClick={() => setIsopenModel(false)}
                 >
                   {' '}
-                  <i class=" px-6 text-4xl fa-brands fa-google"></i> Sign up
+                  <i className=" px-6 text-4xl fa-brands fa-google"></i> Sign up
                   With Google
                 </button>
               </div>
@@ -105,30 +113,74 @@ const Navbar = () => {
                 Close Model
               </button>
             </Model>
-            <button className=" border py-3 px-4 bg-blue-700 text-white font-extralight text-[18px] rounded-3xl">
-              <a href="https://mail.google.com">Contact Now</a>
+            <button className=" border py-3 px-4 mr-5 bg-[#8d57f7] font-medium text-white text-[18px] rounded-3xl">
+              
+              <a href="https://accounts.google.com/" target="_main">
+              {/* https://mail.google.com */}
+              {/* mailto:your_email_address@gmail.com */}
+                Contact Now
+              </a>
             </button>
           </div>
         </div>
       </nav>
 
-      <nav className="w-screen h-full bg-white sm:block md:hidden lg:hidden xl:hidden">
-        <div className="flex h-full justify-between mx-16">
+      <nav className="w-screen  bg-white sm:block md:hidden lg:hidden xl:hidden relative z-20">
+        <div className="flex h-full justify-between mx-10">
           <div>
-            <Link to="/"><img onClick={() => setShow(!show)} src="/images/Screenshot.webp" alt="logo" /></Link>
-            <div className={show ? 'hidden' : 'block'}>
+            <Link to="/">
+              <img
+                onClick={() => setShow(!show)}
+                src="/images/_Downloader.webp"
+                width={100}
+                className=" mt-4"
+                alt="logo"
+              />
+            </Link>
+            <div className={show ? 'block' : 'hidden'}>
               <ul className="flex justify-center font-bold flex-col">
-                <Link onClick={() => setShow(!show)} to="/" className=" mt-10 cursor-pointer">Home</Link>
-                <Link onClick={() => setShow(!show)} to="/plans" className=" mt-10 cursor-pointer">Plans & Pricing</Link>
-                <Link onClick={() => setShow(!show)} to="/blog" className=" mt-10 cursor-pointer">Blog</Link>
+                <NavLink
+                  activeclassname="active"
+                  onClick={() => setShow(!show)}
+                  to="/"
+                  className=" mt-10 cursor-pointer"
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  activeclassname="active"
+                  onClick={() => setShow(!show)}
+                  to="/plans"
+                  className=" mt-10 cursor-pointer"
+                >
+                  Plans & Pricing
+                </NavLink>
+                <NavLink
+                  activeclassname="active"
+                  onClick={() => setShow(!show)}
+                  to="/blog"
+                  className=" mt-10 cursor-pointer"
+                >
+                  Blog
+                </NavLink>
+                <NavLink
+                  activeclassname="active"
+                  onClick={() => setShow(!show)}
+                  to="/login"
+                  className=" mt-10 cursor-pointer"
+                >
+                  .
+                </NavLink>
               </ul>
               <div className=" flex items-center justify-between mt-52">
-                <button 
+                <div onClick={() => setShow(!show)}>
+                <button
                   onClick={() => setIsopenModel(true)}
-                  className=" bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600"
+                  className=" bottom-0 mb-10 left-0 right-0 p-4 font-bold text-white bg-blue-500 hover:bg-blue-600"
                 >
-                  Log In
+                  LogIn
                 </button>
+                </div>
                 <Model
                   isOpen={isopenModel}
                   onRequestClose={() => setIsopenModel(false)}
@@ -147,25 +199,34 @@ const Navbar = () => {
                   </h1>
                   <h1 className=" font-bold flex items-center justify-center py-8">
                     Already a member?{' '}
-                    <span className=" text-[18px] text-[#9e3ffd] cursor-pointer">Log In</span>{' '}
+                    <span onClick={() => setShow(show)} className=" text-[18px] text-[#9e3ffd] cursor-pointer">
+                      <NavLink onClick={() => setIsopenModel(false)} to="/login">LogIn</NavLink>
+                    </span>{' '}
                   </h1>
                   <div className=" mx-auto items-center justify-center flex my-6 flex-col ">
                     <img className="" src="" alt="" />
-                    <button
-                      className="  flex items-center justify-center px-10 border my-4 py-2 bg-[#4e69a2]  text-white"
-                      onClick={() => setIsopenModel(false)}
-                    >
+                    <button className=" flex items-center justify-center px-10 border my-4 py-2 bg-[#4e69a2]  text-white">
                       {' '}
-                      <i class=" px-6 text-4xl fa-brands fa-facebook"></i> Sign
-                      up With Facebook
+                      <a
+                        className="flex items-center justify-center"
+                        href="https://www.facebook.com"
+                      >
+                        {' '}
+                        <i className=" px-2 text-4xl fa-brands fa-facebook"></i>{' '}
+                        Sign up with Facebook
+                      </a>
                     </button>
-                    <button
-                      className="  flex items-center justify-center px-10 border my-4 py-2  bg-[#5591f5] text-white "
-                      onClick={() => setIsopenModel(false)}
-                    >
+                    <button className=" flex items-center justify-center px-10 border my-4 py-2  bg-[#5591f5] text-white">
                       {' '}
-                      <i class=" px-6 text-4xl fa-brands fa-google"></i> Sign up
-                      With Google
+                      <a
+                        className="flex items-center justify-center"
+                        target="_main"
+                        href="https://mail.google.com"
+                      >
+                        {' '}
+                        <i className=" px-4 text-4xl fa-brands fa-google"></i> Sign
+                        up with email
+                      </a>
                     </button>
                   </div>
                   <div className=" flex items-center justify-center">
@@ -179,23 +240,30 @@ const Navbar = () => {
                       <br />
                     </h1>
                   </div>
-                  <button className=" flex items-center justify-center mx-auto mt-7 border px-14 border-black text-2xl py-2">
+                  <button className=" flex items-center justify-center mx-auto mt-7 border px-4 border-black text-2xl py-2">
                     {' '}
-                    Sign up with email
+                    <a href="https://mail.google.com">Sign up with email</a>
                   </button>
                   <p className=" flex items-center justify-center mt-10">
                     Sign up with a public profile.{' '}
-                    <span className=" underline ml-2 cursor-pointer"> Read more </span>
+                    <span className=" underline ml-2 cursor-pointer">
+                      {' '}
+                      <NavLink onClick={() => setIsopenModel(false)} to="/blog"> <a href="/blog">Read More</a></NavLink> {' '}
+                    </span>
                   </p>
                   <button
-                    className=" mx-auto items-center justify-center flex border px-2 py-2 mt-4 border-black font-medium "
+                    className=" mx-auto items-center justify-center flex border px-2 py-2 mt-4  border-black font-medium "
                     onClick={() => setIsopenModel(false)}
                   >
                     Close Model
                   </button>
                 </Model>
-                <button onClick={() => setShow(!show)} className=" bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600">
-                  Contact Now
+                <button
+                  onClick={() => setShow(!show)}
+                  target="_main"
+                  className=" mb-10 bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600 ml-4 font-bold"
+                >
+                  <a href="mailto:your_email_address@gmail.com">Contact Now</a> 
                 </button>
               </div>
             </div>
@@ -205,9 +273,9 @@ const Navbar = () => {
             onClick={() => setShow(!show)}
           >
             {show ? (
-              <i class="fa-solid fa-bars"></i>
+              <i className="fa-solid fa-xmark"></i>
             ) : (
-              <i class="fa-solid fa-xmark"></i>
+              <i className="fa-solid fa-bars"></i>
             )}
           </div>
         </div>
