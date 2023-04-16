@@ -6,7 +6,7 @@ import ScrollButton from './Components/Home/ScrollButton'
 import Navbar from './Components/Navbar'
 import Plans from './Components/Plans/Plans'
 import Login from './Components/Login'
-import Cheat from './Components/Home/Cheat'
+// import Cheat from './Components/Home/Cheat'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           </Routes>
       </BrowserRouter>
       <ScrollButton />
-      <Cheat />
+      {/* <Cheat /> */}
     </div>
   )
 }
